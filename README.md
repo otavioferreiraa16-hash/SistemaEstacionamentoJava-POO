@@ -1,13 +1,13 @@
-# Sistema de Controle de Estacionamento - Etapa 2
+# Sistema de Controle de Estacionamento
 
-Trabalho final da disciplina de Programação Orientada a Objetos (POO), consistindo na implementação do sistema planejado na Etapa 1, utilizando Java e interface gráfica com Swing.
+Trabalho final da disciplina de Programação Orientada a Objetos (POO), utilizando Java e interface gráfica com Swing.
 
 ## 👥 Integrantes da Equipe
 * **Vitor Aguiar Batista**
-* **Otavio Ferreira**
+* **Otavio Ferreira Alves**
 
 **Instituição:** UNIUBE  
-**Curso:** Grande Área de Computação  
+**Curso:** Sistemas de Infomação  
 **Disciplina:** Programação Orientada a Objetos  
 **Professor:** Dr. Camilo Barreto
 
@@ -18,7 +18,6 @@ Este sistema tem como objetivo modernizar e automatizar o gerenciamento de um es
 
 O projeto foi desenvolvido aplicando os conceitos fundamentais de POO e implementando uma interface gráfica amigável para o usuário final.
 
-> **Nota:** Conforme as instruções da Etapa 2, os dados são mantidos em memória durante a execução (não há persistência em banco de dados neste momento).
 
 ---
 
@@ -35,8 +34,8 @@ O sistema atende aos requisitos funcionais definidos na Etapa 1:
 ## 🛠️ Tecnologias Utilizadas
 * **Linguagem:** Java (JDK 17 ou superior recomendado).
 * **Interface Gráfica:** Java Swing (Biblioteca padrão).
-* **IDE Recomendada:** NetBeans, IntelliJ IDEA ou Eclipse.
-* **Versionamento:** Git e GitHub.
+* **IDE:** IntelliJ IDEA.
+* **Versionamento:** GitHub.
 
 ---
 
@@ -54,30 +53,53 @@ O código fonte demonstra o domínio dos seguintes pilares da orientação a obj
 
 ## ⚙️ Como Compilar e Executar
 
-1.  **Clonar o Repositório:**
+Você pode executar o projeto de duas formas: utilizando uma IDE (recomendado para desenvolvimento) ou diretamente pelo terminal (recomendado para testes rápidos).
+
+### Opção 1: Via IDE (NetBeans, IntelliJ, Eclipse)
+1.  Faça o download do projeto ou clone o repositório:
     ```bash
     git clone [https://github.com/SEU_USUARIO/NOME_DO_REPOSITORIO.git](https://github.com/SEU_USUARIO/NOME_DO_REPOSITORIO.git)
     ```
+2.  Abra sua IDE e selecione a opção **Open Project** (Abrir Projeto) ou **Import Project**.
+3.  Selecione a pasta do repositório clonado.
+4.  Localize a classe principal em `src/app/Main.java`.
+5.  Clique com o botão direito e selecione **Run** (Executar).
 
-2.  **Importar na IDE:**
-    * Abra sua IDE (NetBeans, IntelliJ, etc.).
-    * Selecione a opção de "Abrir Projeto" ou "Importar Projeto" e aponte para a pasta clonada.
+### Opção 2: Via Terminal (Linha de Comando)
+Caso não queira usar uma IDE, certifique-se de ter o JDK instalado e configurado no seu PATH.
 
-3.  **Executar:**
-    * Localize a classe principal: `src/app/Main.java`.
-    * Clique com o botão direito e selecione **Run** (Executar).
-    * A janela do sistema deverá abrir automaticamente.
+1.  **Clone o repositório e entre na pasta:**
+    ```bash
+    git clone [https://github.com/SEU_USUARIO/NOME_DO_REPOSITORIO.git](https://github.com/SEU_USUARIO/NOME_DO_REPOSITORIO.git)
+    cd NOME_DO_REPOSITORIO
+    ```
+
+2.  **Compile o código:**
+    (Este comando cria uma pasta `bin` e compila os arquivos Java que estão em `src`)
+    
+    *Linux / MacOS:*
+    ```bash
+    javac -d bin -sourcepath src src/app/Main.java
+    ```
+    
+    *Windows (PowerShell ou CMD):*
+    ```powershell
+    javac -d bin -sourcepath src src\app\Main.java
+    ```
+
+3.  **Execute a aplicação:**
+    ```bash
+    java -cp bin app.Main
+    ```
 
 ---
 
 ## 📋 Estrutura de Pastas
-O projeto está organizado nos seguintes pacotes para melhor separação de responsabilidades:
+O projeto está organizado nos seguintes pacotes para melhor separação de responsabilidades (Arquitetura MVC simplificada):
 
-* `model`: Classes de domínio (Veiculo, Carro, Moto, Ticket).
-* `service`: Regras de negócio e gerenciamento da lista de veículos.
-* `view`: Classes da interface gráfica (Swing).
-* `app`: Classe inicializadora (Main).
+* `src/model`: Classes de domínio (Veiculo, Carro, Moto, Ticket).
+* `src/service`: Regras de negócio e gerenciamento da lista de veículos.
+* `src/view`: Classes da interface gráfica (Telas Swing).
+* `src/app`: Classe inicializadora (Main).
 
 ---
-
-**Data de Entrega:** 11/12/2025
